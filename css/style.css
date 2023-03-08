@@ -5,22 +5,40 @@
   padding: 0;
 }
 .loginPart{
+  margin-top: 10px;
+  width: 95vw;
+  height: 97vh;
+  border-radius: 70px;
   background-color: black;
+  margin-left: 30px;
 }
+
 .loginpage {
   display: flex;
   margin: 5px auto;
   flex-direction: row;
+  justify-content: center;
+}
+.loginform{
+  
+  width: 95vw;
+  height: 97vh;
+  border-radius: 70px;
+}
+.loginMargin{
+  margin-top: 70px;
 }
 .img img {
   width: 40vw;
-  height: 100vh;
+  height: 85vh;
+  border-radius: 140px;
+  padding: 50px;
 }
 form {
   background-color: black;
   color: white;
   width: 50vw;
-  padding-left: 150px;
+  padding-left: 120px;
 }
 h1 {
   font-family: "Open Sans", sans-serif;
@@ -51,7 +69,7 @@ h1 {
   padding: 8px;
   background-color: #1c3bec;
   display: block;
-  width: 58%;
+  width: 59%;
   color: white;
   border: 2px solid #1c3bec;
   position: relative;
@@ -79,7 +97,7 @@ h1 {
   cursor: pointer;
 }
 .btn {
-  width: 58%;
+  width: 59%;
   border: 1px solid rgb(34, 34, 168);
   background-color: black;
   color: white;
@@ -120,7 +138,7 @@ h1 {
 }
 .or .line1,
 .line2 {
-  width: 200px;
+  width: 26.5%;
   height: 0.5px;
   background-color: #455de4;
   display: inline-block;
@@ -129,9 +147,9 @@ h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   padding-left: 60px;
-  text-decoration: underline;
 }
 .forgotpw:hover {
   color: rgb(197, 185, 185);
   cursor: pointer;
+  text-decoration: underline;
 }
