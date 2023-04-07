@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="css/index.css">
      <style>
       /* updated */
       .bannar{
@@ -19,7 +20,7 @@
       }
 
      </style>
-     <link rel="stylesheet" href="css/index.css">
+     <script src="https://cdn.tailwindcss.com"></script>
      <title>Document</title>
 </head>
 <body class="bg-gray-900">
@@ -183,13 +184,15 @@
             </nav>
           </div>
      </header>
-    <div class="world-wapper">
+     <!-- hero section -->
+     <!-- discover scetion -->
+    <div class="world-wapper" data-aos="flip-left" data-aos-duration="2000">
       <div class="container-3 w-container">
         <div class="wapps_sec">
           <div class="toprowcont">
               <div class="conrr">
-                  <h3 class="heading-12">BreakTheTestnet&nbsp;</h3>
-                  <div class="text-block-22">Join Us in Making 5ireChain the Strongest it Can Be.</div>
+                  <h3 class="heading-12 text-3xl">BreakTheTestnet&nbsp;</h3>
+                  <div class="text-block-22 text-lg sm:text-sm">Join Us in Making 5ireChain the Strongest it Can Be.</div>
                   <a href="https://explorer.5ire.network/" target="_blank" class="button-4 w-button">Explore Now</a>
               </div>
           </div>
@@ -200,7 +203,7 @@
       </div>
     </div>
 
-     <footer class="container mx-auto px-10 md:px-0 py-10 bg-gray-900 ">
+     <footer class="container mx-auto px-10 md:px-0 py-10 bg-gray-900" data-aos="zoom-in-up">
           <div class="mb-16 flex flex-col md:flex-row md:items-center justify-between">
             <!-- <div class="logo"><img src="images/asset 6.png" alt="Logo Image"></div> -->
             <div class="grow mt-4 md:mt-0 md:ml-12 flex">
@@ -382,5 +385,13 @@
             <svg class="wave"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 265"><path fill="#a3e635" fill-opacity="1" d="M0,32L60,53.3C120,75,240,117,360,138.7C480,160,600,160,720,181.3C840,203,960,245,1080,234.7C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
           </section>
         </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            offset: 600,
+            delay: 150, // values from 0 to 3000, with step 50ms
+            duration: 1100,
+          });
+        </script>
 </body>
 </html>
