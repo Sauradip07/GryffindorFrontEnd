@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fontsource/dancing-script": "^4.5.11",
     "aos": "^2.3.4"
   }
 }
