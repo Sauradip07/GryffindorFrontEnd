@@ -54,7 +54,16 @@
       }
      </style>
      
-     <title>Document</title>
+     <title>BLOCKCHAIN MEETS</title>
+     <script>
+      var title = document.title;
+      var title1 = "5ire";
+      var title2 = "5ire Chain";
+      setInterval(function() {
+        document.title = (document.title === title1 ? title2 : title1);
+      }, 2000); // change every 1 second
+    </script>
+
 </head>
 <body class="bg-gray-900">
      <header>
@@ -500,5 +509,18 @@
             duration: 1100,
           });
         </script>
+        <h1 id="title1">Title 1</h1>
+        <h1 id="title2">Title 2</h1>
+    
+        <!-- <script>
+          const title1 = document.getElementById('title1');
+          const title2 = document.getElementById('title2');
+    
+          setInterval(() => {
+            const temp = title1.innerText;
+            title1.innerText = title2.innerText;
+            title2.innerText = temp;
+          }, 2000); // Change every 2 seconds
+        </script> -->
 </body>
 </html>
