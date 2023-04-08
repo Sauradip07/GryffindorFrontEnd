@@ -1,0 +1,16 @@
+{
+  "name": "gryffindorfrontend",
+  "version": "1.0.0",
+  "description": "Redesign 5irechain's website with theme inspired from NFT, Dexas and all.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/dancing-script": "^4.5.11",
+    "aos": "^2.3.4"
+  }
+}
