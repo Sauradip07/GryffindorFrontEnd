@@ -2,6 +2,8 @@
 
 Redesign 5irechain's website with theme inspired from NFT, Dexas and all.
 
+<!-- shreya -->
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install 5irechain.
