@@ -1,324 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="css/index.css">
-     <script src="https://cdn.tailwindcss.com"></script>
-     <style>
-          @font-face {
-            font-family: "MenphisRever";
-            src: url(css/fonts/beon-webfont.ttf),url(css/fonts/beon-webfont.woff);
-            font-weight: 700;
-          }
-          @font-face {
-            font-family: "Roadblock";
-            src: url(css/fonts/zorque.otf);
-            font-weight: 700;
-          }
-          @font-face {
-            font-family: "Roadbreak";
-            src: url(css/fonts/Balnuettes.otf);
-            font-weight: 700;
-          }
-          .baseFont{
-            font-family:"MenphisRever";
-            background: -webkit-linear-gradient(#cdcece, #fbfcfc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-          .underFont{
-             font-family:"Roadblock";
-             background: -webkit-linear-gradient(#07d7e6, #d0ef20);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-          .normaltext{
-            font-family: "Roadbreak";
-          }
-      /* updated */
-      .bannar{
-        /* height: 50px; */
-        background-size: cover;
-        background-position: center;
-        
-      }
-      .logo{
-        height: 50px;
-        width: 50px;
-      }
-      .video-content {
-        z-index: 2;
-      }
-.baby{
-  color: white;
-	background: #CAD3DB;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Mulish', sans-serif;
-}
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face {
+      font-family: "MenphisRever";
+      src: url(css/fonts/beon-webfont.ttf), url(css/fonts/beon-webfont.woff);
+      font-weight: 700;
+    }
 
-.subscribe {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: rgb(55,65,81);
-	width: 2000px;
-	height: 350px;
-	border-radius: 10px;
-	box-shadow: 0 4px 20px rgba(61, 159, 255, 0.2)
-}
+    @font-face {
+      font-family: "Roadblock";
+      src: url(css/fonts/zorque.otf);
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Roadbreak";
+      src: url(css/fonts/Balnuettes.otf);
+      font-weight: 700;
+    }
+
+    .baseFont {
+      font-family: "MenphisRever";
+      background: -webkit-linear-gradient(#cdcece, #fbfcfc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .underFont {
+      font-family: "Roadblock";
+      background: -webkit-linear-gradient(#07d7e6, #d0ef20);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .normaltext {
+      font-family: "Roadbreak";
+    }
+
+    /* updated */
+    .bannar {
+      /* height: 50px; */
+      background-size: cover;
+      background-position: center;
+
+    }
+
+    .logo {
+      height: 50px;
+      width: 50px;
+    }
+
+    .video-content {
+      z-index: 2;
+    }
+
+    .baby {
+      color: white;
+      background: #CAD3DB;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Mulish', sans-serif;
+    }
+
+    .subscribe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgb(55, 65, 81);
+      width: 2000px;
+      height: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(61, 159, 255, 0.2)
+    }
 
 
-.subscribe__title {
-	font-weight: bold;
-	font-size: 26px;
-	margin-bottom: 18px;
-}
+    .subscribe__title {
+      font-weight: bold;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
 
-.subscribe__copy {
-	max-width: 450px;
-	text-align: center;
-	margin-bottom: 53px;
-	line-height: 1.5;
-}
+    .subscribe__copy {
+      max-width: 450px;
+      text-align: center;
+      margin-bottom: 53px;
+      line-height: 1.5;
+    }
 
-.form {
-	margin-bottom: 25px;
-}
+    .form {
+      margin-bottom: 25px;
+    }
 
-.form__email {
-	padding: 20px 25px;
-	border-radius: 5px;
- 	border: 1px solid #CAD3DB;
-	width: 431px;
-	font-size: 18px;
-	color: #0F121F;
-}
+    .form__email {
+      padding: 20px 25px;
+      border-radius: 5px;
+      border: 1px solid #CAD3DB;
+      width: 431px;
+      font-size: 18px;
+      color: #0F121F;
+    }
 
-.form__email:focus {
-	outline: 1px solid #3D9FFF;
-}
+    .form__email:focus {
+      outline: 1px solid #3D9FFF;
+    }
 
-.form__button {
-  margin-left: 1.5rem;
-	background: rgba(61, 159, 255, 0.7);
-	padding: 10px;
-	border: none;
-	width: 244px;
-	height: 65px;
-	border-radius: 5px;
-	font-size: 18px;
-	color: white;
-	box-shadow: 0 4px 20px rgba(61, 159, 255, 0.7);
-}
+    .form__button {
+      margin-left: 1.5rem;
+      background: rgba(61, 159, 255, 0.7);
+      padding: 10px;
+      border: none;
+      width: 244px;
+      height: 65px;
+      border-radius: 5px;
+      font-size: 18px;
+      color: white;
+      box-shadow: 0 4px 20px rgba(61, 159, 255, 0.7);
+    }
 
-.form__button:hover {
-	box-shadow: 0 10px 20px rgba(61, 159, 255, 0.7);
-}
+    .form__button:hover {
+      box-shadow: 0 10px 20px rgba(61, 159, 255, 0.7);
+    }
 
-.notice {
-	width: 620px;
-}
-     </style>
-     
-     <title>BLOCKCHAIN MEETS</title>
-     <script>
-      var title = document.title;
-      var title1 = "5ire";
-      var title2 = "5ire Chain - Blockchain Meets Sustainablity";
-      setInterval(function() {
-        document.title = (document.title === title1 ? title2 : title1);
-      }, 2000); // change every 1 second
-    </script>
-    <link rel="shortcut icon" href="asset 6.png" type="image/x-icon">
+    .notice {
+      width: 620px;
+    }
+  </style>
+
+  <title>BLOCKCHAIN MEETS</title>
+  <script>
+    var title = document.title;
+    var title1 = "5ire";
+    var title2 = "5ire Chain - Blockchain Meets Sustainablity";
+    setInterval(function () {
+      document.title = (document.title === title1 ? title2 : title1);
+    }, 2000); // change every 1 second
+  </script>
+  <link rel="shortcut icon" href="asset 6.png" type="image/x-icon">
 </head>
+
 <body class="bg-gray-900">
-     <header>
-        <div class=" top-0 z-30 bg-white dark:bg-black absolute">
-          <nav class=" lg:px-4 max-w-screen-lg mx-auto bg-gray-900 shadow-md overflow-hidden md:w-screen lg:max-w-full z-10">
-              <div class=" container flex flex-wrap items-center justify-between mx-auto">
-                <a href="#" class="flex">
-                  <div class="grow mt-4 md:mt-0 md:ml-8 flex">
-                    <img class="logo"src="images/asset 6.png" alt="Logo Image">
-                    <p class="text-2xl flex justify-start mx-2 items-center font-extrabold text-white"><span class="first-letter:font-extrabold first-letter:text-5xl text-opacity-90">5</span>ire</p>
-                  </div>
-                </a>
-                <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-full md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                </button>
-                <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-                  <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                      <a href="#" class="block mt-2 py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">About Us <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                              <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                              </li>
-                              <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                              </li>
-                              <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                              </li>
-                            </ul>
-                            <div class="py-1">
-                              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                      <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Testnet <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-                      <!-- Dropdown menu -->
-                      <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                          <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                            </li>
-                          </ul>
-                          <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
-                          </div>
-                      </div>
-                  </li>
-                  <li>
-                      <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Community <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-                      <!-- Dropdown menu -->
-                      <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                          <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                            </li>
-                          </ul>
-                          <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
-                          </div>
-                      </div>
-                  </li>
-                  <li>
-                      <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Research <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-                      <!-- Dropdown menu -->
-                      <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                          <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                            </li>
-                          </ul>
-                          <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
-                          </div>
-                      </div>
-                  </li>
-          
-                  <li>
-                    <a href="#" class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Sustainability</a>
-                  </li>
-                    <li>
-                      <button class="block py-2 pl-3 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded-full">
-                          Join Us
-                        </button>
-                    </li>
-                    <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center justify-center px-4 py-2 text-sm text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
-                      <svg class="w-5 h-5 mr-2 rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900"><path fill="#b22234" d="M0 0h7410v3900H0z"/><path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/><path fill="#3c3b6e" d="M0 0h2964v2100H0z"/><g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b"><path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"/><use xlink:href="#a" y="420"/><use xlink:href="#a" y="840"/><use xlink:href="#a" y="1260"/></g><use xlink:href="#a" y="1680"/></g><use xlink:href="#b" x="247" y="210"/></g><use xlink:href="#c" x="494"/></g><use xlink:href="#d" x="988"/><use xlink:href="#c" x="1976"/><use xlink:href="#e" x="2470"/></g></svg>
-                      English (US)
-                    </button>
-                    <!-- Dropdown -->
-                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700" id="language-dropdown-menu">
-                      <ul class="py-2" role="none">
-                        <li>
-                          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                            <div class="inline-flex items-center">
-                              <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full mr-2" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-us" viewBox="0 0 512 512"><g fill-rule="evenodd"><g stroke-width="1pt"><path fill="#bd3d44" d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/><path fill="#fff" d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/></g><path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)"/><path fill="#fff" d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z" transform="scale(3.9385)"/></g></svg>              
-                              English (US)
-                            </div>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                            <div class="inline-flex items-center">
-                              <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-de" viewBox="0 0 512 512"><path fill="#ffce00" d="M0 341.3h512V512H0z"/><path d="M0 0h512v170.7H0z"/><path fill="#d00" d="M0 170.7h512v170.6H0z"/></svg>
-                              Deutsch
-                            </div>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                            <div class="inline-flex items-center">
-                              <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-it" viewBox="0 0 512 512"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#fff" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>              
-                              Italiano
-                            </div>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                            <div class="inline-flex items-center">
-                              <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icon-css-cn" viewBox="0 0 512 512"><defs><path id="a" fill="#ffde00" d="M1-.3L-.7.8 0-1 .6.8-1-.3z"/></defs><path fill="#de2910" d="M0 0h512v512H0z"/><use width="30" height="20" transform="matrix(76.8 0 0 76.8 128 128)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-121 142.6 -47) scale(25.5827)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-98.1 198 -82) scale(25.6)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-74 272.4 -114) scale(25.6137)" xlink:href="#a"/><use width="30" height="20" transform="matrix(16 -19.968 19.968 16 256 230.4)" xlink:href="#a"/></svg>
-                              中文 (繁體)
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <button data-collapse-toggle="mobile-menu-language-select" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-language-select" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                  </button>
-                </div>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-     </header>
-     <!-- hero section -->
-     <!-- <audio autoplay loop src="srk.mp3"></audio>   -->
-      <section class="relative h-screen flex flex-col items-center justify-center text-center text-white h-5/6 w-11/12 m-auto rounded-xl relative" data-aos="flip-left" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="bottom-bottom">
-        <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden rounded-xl">
-            <video class="min-w-full min-h-full absolute object-cover" src="Videos/istockphoto-1352256000-640_adpp_is.mp4" type="video/mp4" autoplay muted  loop></video>
-            
-        </div>
-        <div class="video-content space-y-2">
-          <form class=" h-auto">
-            <div class="text-4xl md:text-8xl text-center text-slate-100 pt-0 font-black tracking-widest baseFont">
-              BLOCKCHAIN MEETS
+  <header>
+    <div class=" top-0 z-30 bg-white dark:bg-black absolute">
+      <nav
+        class=" lg:px-4 max-w-screen-lg mx-auto bg-gray-900 shadow-md overflow-hidden md:w-screen lg:max-w-full z-10">
+        <div class=" container flex flex-wrap items-center justify-between mx-auto">
+          <a href="#" class="flex">
+            <div class="grow mt-4 md:mt-0 md:ml-8 flex">
+              <img class="logo" src="images/asset 6.png" alt="Logo Image">
+              <p class="text-2xl flex justify-start mx-2 items-center font-extrabold text-white"><span
+                  class="first-letter:font-extrabold first-letter:text-5xl text-opacity-90">5</span>ire</p>
             </div>
-            <div class="text-center  pt-0 font-bold tracking-widest m-4 text-3xl md:text-6xl underFont" >SUSTAINABILITY</div>
-            <div class="text-lg text-center text-slate-100 pt-3">
-              5ireChain is a layer-1 EVM compatible smart contract platform that focuses on developing a <br> for-benefit blockchain ecosystem based on the Sustainable Development Goals (SDGs) <br> defined by the United Nations (UN)
-            </div>            
-          </form>
+          </a>
+          <button data-collapse-toggle="navbar-dropdown" type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-full md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-dropdown" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul
+              class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="#"
+                  class="block mt-2 py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent"
+                  aria-current="page">Home</a>
+              </li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                  class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">About
+                  Us <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                      out</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                  class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Testnet
+                  <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                      out</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                  class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Community
+                  <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                      out</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                  class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Research
+                  <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                      out</a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="#"
+                  class="flex mt-2 py-2 px-4 items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Sustainability</a>
+              </li>
+              <li>
+                <button class="block py-2 pl-3 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded-full">
+                  Join Us
+                </button>
+              </li>
+              <button type="button" data-dropdown-toggle="language-dropdown-menu"
+                class="inline-flex items-center justify-center px-4 py-2 text-sm text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                <svg class="w-5 h-5 mr-2 rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
+                  <path fill="#b22234" d="M0 0h7410v3900H0z" />
+                  <path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff"
+                    stroke-width="300" />
+                  <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
+                  <g fill="#fff">
+                    <g id="d">
+                      <g id="c">
+                        <g id="e">
+                          <g id="b">
+                            <path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z" />
+                            <use xlink:href="#a" y="420" />
+                            <use xlink:href="#a" y="840" />
+                            <use xlink:href="#a" y="1260" />
+                          </g>
+                          <use xlink:href="#a" y="1680" />
+                        </g>
+                        <use xlink:href="#b" x="247" y="210" />
+                      </g>
+                      <use xlink:href="#c" x="494" />
+                    </g>
+                    <use xlink:href="#d" x="988" />
+                    <use xlink:href="#c" x="1976" />
+                    <use xlink:href="#e" x="2470" />
+                  </g>
+                </svg>
+                English (US)
+              </button>
+              <!-- Dropdown -->
+              <div
+                class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+                id="language-dropdown-menu">
+                <ul class="py-2" role="none">
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                      role="menuitem">
+                      <div class="inline-flex items-center">
+                        <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full mr-2" xmlns="http://www.w3.org/2000/svg"
+                          id="flag-icon-css-us" viewBox="0 0 512 512">
+                          <g fill-rule="evenodd">
+                            <g stroke-width="1pt">
+                              <path fill="#bd3d44"
+                                d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                                transform="scale(3.9385)" />
+                              <path fill="#fff"
+                                d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                                transform="scale(3.9385)" />
+                            </g>
+                            <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)" />
+                            <path fill="#fff"
+                              d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
+                              transform="scale(3.9385)" />
+                          </g>
+                        </svg>
+                        English (US)
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                      role="menuitem">
+                      <div class="inline-flex items-center">
+                        <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                          id="flag-icon-css-de" viewBox="0 0 512 512">
+                          <path fill="#ffce00" d="M0 341.3h512V512H0z" />
+                          <path d="M0 0h512v170.7H0z" />
+                          <path fill="#d00" d="M0 170.7h512v170.6H0z" />
+                        </svg>
+                        Deutsch
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                      role="menuitem">
+                      <div class="inline-flex items-center">
+                        <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                          id="flag-icon-css-it" viewBox="0 0 512 512">
+                          <g fill-rule="evenodd" stroke-width="1pt">
+                            <path fill="#fff" d="M0 0h512v512H0z" />
+                            <path fill="#009246" d="M0 0h170.7v512H0z" />
+                            <path fill="#ce2b37" d="M341.3 0H512v512H341.3z" />
+                          </g>
+                        </svg>
+                        Italiano
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                      role="menuitem">
+                      <div class="inline-flex items-center">
+                        <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icon-css-cn" viewBox="0 0 512 512">
+                          <defs>
+                            <path id="a" fill="#ffde00" d="M1-.3L-.7.8 0-1 .6.8-1-.3z" />
+                          </defs>
+                          <path fill="#de2910" d="M0 0h512v512H0z" />
+                          <use width="30" height="20" transform="matrix(76.8 0 0 76.8 128 128)" xlink:href="#a" />
+                          <use width="30" height="20" transform="rotate(-121 142.6 -47) scale(25.5827)"
+                            xlink:href="#a" />
+                          <use width="30" height="20" transform="rotate(-98.1 198 -82) scale(25.6)" xlink:href="#a" />
+                          <use width="30" height="20" transform="rotate(-74 272.4 -114) scale(25.6137)"
+                            xlink:href="#a" />
+                          <use width="30" height="20" transform="matrix(16 -19.968 19.968 16 256 230.4)"
+                            xlink:href="#a" />
+                        </svg>
+                        中文 (繁體)
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button data-collapse-toggle="mobile-menu-language-select" type="button"
+                class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="mobile-menu-language-select" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" aria-hidden="true" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+          </div>
+          </ul>
         </div>
-    </section>
-    <!-- logo section  -->
-    <div class="w-11/12 mx-auto mt-[70px]">
+    </div>
+    </nav>
+    </div>
+  </header>
+  <!-- hero section -->
+  <!-- <audio autoplay loop src="srk.mp3"></audio>   -->
+  <section
+    class="relative h-screen flex flex-col items-center justify-center text-center text-white h-5/6 w-11/12 m-auto rounded-xl relative"
+    data-aos="flip-left" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="bottom-bottom">
+    <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden rounded-xl">
+      <video class="min-w-full min-h-full absolute object-cover" src="Videos/istockphoto-1352256000-640_adpp_is.mp4"
+        type="video/mp4" autoplay muted loop></video>
+    </div>
+    <div class="video-content space-y-2">
+      <form class=" h-auto">
+        <div class="text-4xl md:text-8xl text-center text-slate-100 pt-0 font-black tracking-widest baseFont">
+          BLOCKCHAIN MEETS
+        </div>
+        <div class="text-center  pt-0 font-bold tracking-widest m-4 text-3xl md:text-6xl underFont">SUSTAINABILITY</div>
+        <div class="text-lg text-center text-slate-100 pt-3">
+          5ireChain is a layer-1 EVM compatible smart contract platform that focuses on developing a <br> for-benefit
+          blockchain ecosystem based on the Sustainable Development Goals (SDGs) <br> defined by the United Nations (UN)
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- logo section  -->
+  <div class="w-11/12 mx-auto mt-[70px]">
     <div class="mt-6">
       <div class="container ">
         <div class="brand-wheel ">
@@ -330,10 +495,10 @@
               <img alt="#" src="./images/img2.png">
             </div>
             <div class="logo-div">
-            <img alt="#" src="./images/img3.png">
+              <img alt="#" src="./images/img3.png">
             </div>
             <div class="logo-div">
-                    <img alt="#" src="./images/img4.png">
+              <img alt="#" src="./images/img4.png">
             </div>
             <div class="logo-div">
               <img alt="#" src="./images/img5.png">
@@ -342,24 +507,24 @@
               <img alt="#" src="./images/img6.png">
             </div>
             <div class="logo-div">
-                  <img alt="#" src="./images/img7.png">
+              <img alt="#" src="./images/img7.png">
             </div>
             <div class="logo-div">
               <img alt="#" src="./images/img8.png">
             </div>
           </div>
           <div class="brand-slide delay">
-                  <div class="logo-div">
+            <div class="logo-div">
               <img alt="#" src="./images/img9.png">
             </div>
             <div class="logo-div">
               <img alt="#" src="./images/img10.png">
             </div>
             <div class="logo-div">
-            <img alt="#" src="./images/img11.png">
+              <img alt="#" src="./images/img11.png">
             </div>
             <div class="logo-div">
-                    <img alt="#" src="./images/img12.png">
+              <img alt="#" src="./images/img12.png">
             </div>
             <div class="logo-div">
               <img alt="#" src="./images/img13.png">
@@ -368,7 +533,7 @@
               <img alt="#" src="./images/img14.png">
             </div>
             <div class="logo-div">
-                  <img alt="#" src="./images/img15.png">
+              <img alt="#" src="./images/img15.png">
             </div>
             <div class="logo-div">
               <img alt="#" src="./images/img16.png">
@@ -376,107 +541,110 @@
           </div>
         </div>
       </div>
-        <div class="container ">
-          <div class="brand-wheel ">
-            <div class="brand-slide">
-              <div class="logo-div">
-                <img alt="#" src="./images/img17.png">
-              </div>
-              <div class="logo-div">
-                <img alt="#" src="./images/img18.png">
-              </div>
-              <div class="logo-div">
-              <img alt="#" src="./images/img19.png">
-              </div>
-              <div class="logo-div">
-                      <img alt="#" src="./images/img20.png">
-              </div>
-              <div class="logo-div">
-                <img alt="#" src="./images/img21.png">
-              </div>
-              <div class="logo-div">
-                <img alt="#" src="./images/img22.png">
-              </div>
-              <div class="logo-div">
-                    <img alt="#" src="./images/img23.png">
-              </div>
-              <div class="logo-div">
-                <img alt="#" src="./images/img24.png">
-              </div>
+      <div class="container ">
+        <div class="brand-wheel ">
+          <div class="brand-slide">
+            <div class="logo-div">
+              <img alt="#" src="./images/img17.png">
             </div>
-            <div class="brand-slide delay">
-                    <div class="logo-div">
-                <img alt="#" src="./images/img25.png">
-              </div>
-              <div class="logo-div">
-                <img alt="#" src="./images/img26.png">
-              </div>
-              <div class="logo-div">
+            <div class="logo-div">
+              <img alt="#" src="./images/img18.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img19.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img20.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img21.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img22.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img23.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img24.png">
+            </div>
+          </div>
+          <div class="brand-slide delay">
+            <div class="logo-div">
+              <img alt="#" src="./images/img25.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img26.png">
+            </div>
+            <div class="logo-div">
               <img alt="#" src="./images/img27.png">
-              </div>
-              <div class="logo-div">
-                      <img alt="#" src="./images/img28.png">
-              </div>
-              <div class="logo-div">
-                <img alt="#" src="./images/img29.png">
-              </div>
-              <div class="logo-div">
-                <img alt="#" src="./images/img30.png">
-              </div>
-              <div class="logo-div">
-                    <img alt="#" src="./images/img32.png">
-              </div>
-              <div class="logo-div">
-                <img alt="#" src="./images/img33.png">
-              </div>
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img28.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img29.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img30.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img32.png">
+            </div>
+            <div class="logo-div">
+              <img alt="#" src="./images/img33.png">
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
   <style>
-  /* Hide the horizontal scrollbar */
-  @keyframes fade-in {
+    /* Hide the horizontal scrollbar */
+    @keyframes fade-in {
       0% {
-          opacity: 0;
+        opacity: 0;
       }
+
       100% {
-          opacity: 1;
+        opacity: 1;
       }
-  }
-  .brand-wheel {
+    }
+
+    .brand-wheel {
       flex-direction: row;
       align-items: center;
       display: flex;
       overflow: hidden;
       position: relative;
       height: 100px;
-  
+
       --animationspeed: 15s;
-      --animationdelay: calc( var(--animationspeed) / 2 );
-  }
-  
-  .brand-wheel::before {
+      --animationdelay: calc(var(--animationspeed) / 2);
+    }
+
+    .brand-wheel::before {
       position: absolute;
-      background-image: linear-gradient(to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
       content: '';
       height: 100%;
       width: 5%;
       z-index: 2;
       pointer-events: none;
-  }
-  .brand-wheel::after{
+    }
+
+    .brand-wheel::after {
       position: absolute;
-      background-image: linear-gradient(to left,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+      background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
       content: '';
       height: 100%;
       width: 5%;
       z-index: 2;
       pointer-events: none;
       right: 0;
-  }
-  
-  .brand-slide {
+    }
+
+    .brand-slide {
       flex-shrink: 0;
       position: absolute;
       animation-name: slidelogo;
@@ -486,91 +654,103 @@
       width: 100%;
       display: flex;
       justify-content: space-around;
-  }
-  
-  .brand-slide.delay {
+    }
+
+    .brand-slide.delay {
       transform: translateX(100%);
       animation-name: slidelogo;
       animation-delay: var(--animationdelay);
-  }
-  
-  .brand-wheel:hover .brand-slide {
+    }
+
+    .brand-wheel:hover .brand-slide {
       animation-play-state: paused;
-  }
-  
-  .logo-div {
+    }
+
+    .logo-div {
       display: inline-flex;
       align-self: center;
       animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
       padding: 0 20px 0 20px;
-  }
-  
-  @keyframes slidelogo {
+    }
+
+    @keyframes slidelogo {
       from {
-          transform: translateX(100%);
+        transform: translateX(100%);
       }
+
       to {
-          transform: translateX(-100%);
+        transform: translateX(-100%);
       }
-      
-  }
-</style>
+
+    }
+  </style>
   <!-- build to earn  -->
-  <div class="BuildToEarn lg:px-4 shadow-md overflow-hidden w-11/12 bg-gray-700 flex justify-center space-x-5 rounded-3xl my-[70px] mx-auto" data-aos="fade-right" data-aos-duration="1100" data-aos-once="true" data-aos-anchor-placement="center-bottom" >
-      <div class="mx-[80px]">
-          <p class="text-white text-4xl font-bold pt-20 mx-[10px]">BuildToEarn</p>
-          <ul class="text-white list-disc text-md pt-10 font-normal space-y-3 mx-10">
-              <li>Top 10 dApps to receive an incentive after evaluation.</li>
-              <li>An opportunity to earn rewards through our referral program<br> and grants scheme.</li>
-              <li>An incentivization scheme for dApps focused on sustainable<br>development.</li>
-              <li>Reduced gas fees for early adopters and the first 500<br>builders to receive a share of block rewards.</li>
-          </ul>
-          <div class="py-10 mx-[20px]">
-              <button class="bg-sky-400 font-bold py-1 px-6 rounded-xl border-sky-400 border-2 hover:border-sky-900 text-lg text-white">Learn More</button>
-          </div>
-      </div>
-      <div class="rounded-2xl w-3/5 m-auto p-8 rounded-2xl">
-          <img src="https://cdn.midjourney.com/395d0113-a995-4898-b0f2-870d64c850c0/grid_0.png" class="m-auto h-3/5 w-3/5 rounded-2xl" alt="jde">
+  <div
+    class="BuildToEarn lg:px-4 shadow-md overflow-hidden w-11/12 bg-gray-700 flex justify-center space-x-5 rounded-3xl my-[70px] mx-auto"
+    data-aos="fade-right" data-aos-duration="1100" data-aos-once="true" data-aos-anchor-placement="center-bottom">
+    <div class="mx-[80px]">
+      <p class="text-white text-4xl font-bold pt-20 mx-[10px]">BuildToEarn</p>
+      <ul class="text-white list-disc text-md pt-10 font-normal space-y-3 mx-10">
+        <li>Top 10 dApps to receive an incentive after evaluation.</li>
+        <li>An opportunity to earn rewards through our referral program<br> and grants scheme.</li>
+        <li>An incentivization scheme for dApps focused on sustainable<br>development.</li>
+        <li>Reduced gas fees for early adopters and the first 500<br>builders to receive a share of block rewards.</li>
+      </ul>
+      <div class="py-10 mx-[20px]">
+        <button
+          class="bg-sky-400 font-bold py-1 px-6 rounded-xl border-sky-400 border-2 hover:border-sky-900 text-lg text-white">Learn
+          More</button>
       </div>
     </div>
+    <div class="rounded-2xl w-3/5 m-auto p-8 rounded-2xl">
+      <img src="https://cdn.midjourney.com/395d0113-a995-4898-b0f2-870d64c850c0/grid_0.png"
+        class="m-auto h-3/5 w-3/5 rounded-2xl" alt="jde">
+    </div>
+  </div>
   </div>
   <!-- box grid -->
   <div class="4boxes-homepage  relative  grid grid-rows-2 md:grid-cols-2 gap-4 px-7 py-14 sm:ml-7 ">
-    <div class="bg-gradient-to-r from-cyan-900 to-blue-900 rounded-2xl pt-10 px-3 overflow-y-auto" data-aos="slide-left" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
-        <div class="text-white text-center">
-            <p class="lg:text-4xl sm:text-xs font-bold pb-4">Government</p>
-            <p class="text-sm md:text-lg font-normal ">5ire provides a novel way for governments to engage with<br> citizens
-                and
-                scale their capacities for effective administration<br> with transparency, efficiency, and speed.
-            </p>
-        </div>
-        <div class=""><img src="government.png" class="pl-36 pt-8 hidden md:block m-auto" alt=""></div>
+    <div class="bg-gradient-to-r from-cyan-900 to-blue-900 rounded-2xl pt-10 px-3 overflow-y-auto" data-aos="slide-left"
+      data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
+      <div class="text-white text-center">
+        <p class="lg:text-4xl sm:text-xs font-bold pb-4">Government</p>
+        <p class="text-sm md:text-lg font-normal ">5ire provides a novel way for governments to engage with<br> citizens
+          and
+          scale their capacities for effective administration<br> with transparency, efficiency, and speed.
+        </p>
+      </div>
+      <div class=""><img src="government.png" class="pl-36 pt-8 hidden md:block m-auto" alt=""></div>
     </div>
-    <div class="bg-gradient-to-r from-cyan-900 to-blue-900 rounded-2xl  pt-10 px-3 overflow-y-auto" data-aos="slide-right" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
-        <div class="text-white text-center">
-            <p class="lg:text-4xl sm:text-xs font-bold pb-4">Fortune 500</p>
-            <p class="text-sm md:text-lg font-normal ">Fortune 500 companies have a disproportionate impact on the<br> future
-                of
-                the world's sustainability. By encoding SGDs and ESG in<br> our blockchain, 5ire makes it easy for
-                businesses to do good.</p>
-        </div>
-        <div><img src="fortune500.png" class="pl-28 hidden md:block ml-[5px]" alt=""></div>
+    <div class="bg-gradient-to-r from-cyan-900 to-blue-900 rounded-2xl  pt-10 px-3 overflow-y-auto"
+      data-aos="slide-right" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
+      <div class="text-white text-center">
+        <p class="lg:text-4xl sm:text-xs font-bold pb-4">Fortune 500</p>
+        <p class="text-sm md:text-lg font-normal ">Fortune 500 companies have a disproportionate impact on the<br>
+          future
+          of
+          the world's sustainability. By encoding SGDs and ESG in<br> our blockchain, 5ire makes it easy for
+          businesses to do good.</p>
+      </div>
+      <div><img src="fortune500.png" class="pl-28 hidden md:block ml-[5px]" alt=""></div>
     </div>
-    <div class="bg-gradient-to-r from-cyan-900 to-blue-900 rounded-2xl  pt-10 px-3 overflow-y-auto" data-aos="slide-left" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
-        <div class="text-white text-center">
-            <p class="lg:text-4xl sm:text-xs font-bold pb-4">Social Entrepreneurs</p>
-            <p class="text-sm md:text-lg font-normal px-16">5ire is fast, secure, and cheap. This makes us an ideal ecosystem for
-                entrepreneurs who want to combine impact with business as they scale their mission.</p>
-        </div>
-        <div><img src="social enterpreneurs.svg" class="pl-14 pt-4 hidden md:block m-auto" alt=""></div>
+    <div class="bg-gradient-to-r from-cyan-900 to-blue-900 rounded-2xl  pt-10 px-3 overflow-y-auto"
+      data-aos="slide-left" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
+      <div class="text-white text-center">
+        <p class="lg:text-4xl sm:text-xs font-bold pb-4">Social Entrepreneurs</p>
+        <p class="text-sm md:text-lg font-normal px-16">5ire is fast, secure, and cheap. This makes us an ideal
+          ecosystem for
+          entrepreneurs who want to combine impact with business as they scale their mission.</p>
+      </div>
+      <div><img src="social enterpreneurs.svg" class="pl-14 pt-4 hidden md:block m-auto" alt=""></div>
     </div>
-    <div class="bg-gradient-to-r from-cyan-900 to-blue-900 rounded-3xl  pt-10 px-3 overflow-y-auto" data-aos="slide-right" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
-        <div class="text-white text-center">
-            <p class="lg:text-4xl sm:text-xs font-bold pb-4">Universities</p>
-            <p class="text-sm md:text-lg font-normal">5ire helps universities leverage the power of sustainability and<br>
-                make their administration and operations digitalized, real-time<br> and transparent.</p>
-        </div>
-        <div><img src="universities.svg" class="pl-4 pb-4 hidden md:block m-auto " alt=""></div>
+    <div class="bg-gradient-to-r from-cyan-900 to-blue-900 rounded-3xl  pt-10 px-3 overflow-y-auto"
+      data-aos="slide-right" data-aos-duration="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
+      <div class="text-white text-center">
+        <p class="lg:text-4xl sm:text-xs font-bold pb-4">Universities</p>
+        <p class="text-sm md:text-lg font-normal">5ire helps universities leverage the power of sustainability and<br>
+          make their administration and operations digitalized, real-time<br> and transparent.</p>
+      </div>
+      <div><img src="universities.svg" class="pl-4 pb-4 hidden md:block m-auto " alt=""></div>
     </div>
 </div>   
      <!-- discover scetion -->
@@ -591,7 +771,7 @@
       </div>
     </div>
     <!-- subscribe section -->
-    <div class="baby  bg-gray-900 mb-[50px]" data-aos="slide-left" data-aos-duration="1100" data-aos-anchor-placement="center-bottom" data-aos-once="true">
+    <div class="baby bg-gray-900 mb-[50px]" data-aos="slide-left" data-aos-duration="1100" data-aos-anchor-placement="center-bottom" data-aos-once="true">
     
       <div class="subscribe w-11/12">
         <h2 class="subscribe__title">Join the 5ireverse</h2>
@@ -706,7 +886,7 @@
             </div>
           </div>
           <div
-            class="flex flex-col  md:ml-8 lg:flex-row lg:items-center lg:justify-center lg:space-x-2 w-[100%]">
+            class="flex flex-col md:ml-8 lg:flex-row lg:items-center lg:justify-center lg:space-x-2 w-[100%]">
             <div class="mb-4">
               <h4
               class="font-medium text-xl md:text-[26px] md:leading-[30.3px] lg:text-[31px] lg:leading-[40.3px] text-gray-700 dark:text-gray-100 mt-4">
@@ -716,87 +896,86 @@
              <h4
                class="font-medium text-xl md:text-[26px] md:leading-[30.3px] lg:text-[31px] lg:leading-[40.3px] text-gray-700 dark:text-gray-100
                mt-4">
-               Join the 5ireverse
-             </h4>     
-             <p
-               class="text-sm md:text-base mr-4 lg:text-lg text-gray-500 dark:text-gray-400 font-medium mt-4 md:w-[391px]">
-               Subscribe to our Newsletter.
-             </p>
-              <form class="mt-8 flex items-center space-x-2">
-                <input
-                  class="flex h-10 w-7/12 rounded-md border border-gray-300 bg-transparent py-2 px-3 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
-                  type="email"
-                  placeholder="Email" />
-                <button
-                  class="active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-indigo-400 focus:ring-offset-1 dark:hover:bg-indigo-700 dark:hover:text-gray-100 disabled:opacity-50 dark:focus:ring-indigo-400 disabled:pointer-events-none dark:focus:ring-offset-gray-900 bg-indigo-600 dark:bg-indigo-600 text-white hover:bg-indigo-700 h-10 py-2 px-4">
-                  Subscribe
-                </button>
-              </form>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-[2.75rem] mt-8 lg:mt-0">
-              <div class="mb-4">
-                <p class="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-6">
-                  General
-                </p>
-                <ul
-                  class="flex flex-col space-y-4 font-medium text-[14px] text-gray-500 dark:text-gray-400">
-                  <li>About Us</li>
-                  <li>Documentation</li>
-                  <li>Contact us</li>
-                  <li>News & Media</li>
-                </ul>
-              </div>
-              <div class="mb-4">
-                <p class="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-6">
-                  Explore
-                </p>
-                <ul
-                  class="flex flex-col space-y-4 font-medium text-[14px] text-gray-500 dark:text-gray-400">
-                  <li>Blog</li>
-                  <li>Community</li>
-                  <li>Roadmap</li>
-                  <li>Brand Kit</li>
-                </ul>
-              </div>
-              <div class="mb-4">
-                <p class="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-6">
-                  Foundation
-                </p>
-                <ul
-                  class="flex flex-col space-y-4 font-medium text-[14px] text-gray-500 dark:text-gray-400">
-                  <li>Privacy Policy</li>
-                  <li>Research</li>
-                  <li>Become a Validator</li>
-                  <li>5ire Ambassador Program</li>
-                  <li>Sustainability</li>
-                </ul>
-              </div>
-              <div class="mb-4">
-               <p class="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-6">
-                Legal
-               </p>
-               <ul
-                 class="flex flex-col space-y-4 font-medium text-[14px] text-gray-500 dark:text-gray-400">
-                 <li>Privacy Policy</li>
-               </ul>
-             </div>
-            </div>
-          </div>
-          <hr class="w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
-          <div class="flex justify-between item-center p-4 w-[100%]">
-            <div class="m-[auto] text-white"> All Rights Reserved © 5ire 2023</div>
-          </div>
-          <section class="bannar hidden md:block m-[-100px]">
-            <svg class="wave"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 265"><path fill="#a3e635" fill-opacity="1" d="M0,32L60,53.3C120,75,240,117,360,138.7C480,160,600,160,720,181.3C840,203,960,245,1080,234.7C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-          </section>
-        </footer>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init({
-            offset: 600,
-            delay: 0, // values from 0 to 3000, with step 50ms
-            duration: 1100,
-          });
-        </script>
+          Join the 5ireverse
+        </h4>
+        <p class="text-sm md:text-base mr-4 lg:text-lg text-gray-500 dark:text-gray-400 font-medium mt-4 md:w-[391px]">
+          Subscribe to our Newsletter.
+        </p>
+        <form class="mt-8 flex items-center space-x-2">
+          <input
+            class="flex h-10 w-7/12 rounded-md border border-gray-300 bg-transparent py-2 px-3 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+            type="email" placeholder="Email" />
+          <button
+            class="active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-indigo-400 focus:ring-offset-1 dark:hover:bg-indigo-700 dark:hover:text-gray-100 disabled:opacity-50 dark:focus:ring-indigo-400 disabled:pointer-events-none dark:focus:ring-offset-gray-900 bg-indigo-600 dark:bg-indigo-600 text-white hover:bg-indigo-700 h-10 py-2 px-4">
+            Subscribe
+          </button>
+        </form>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-[2.75rem] mt-8 lg:mt-0">
+        <div class="mb-4">
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-6">
+            General
+          </p>
+          <ul class="flex flex-col space-y-4 font-medium text-[14px] text-gray-500 dark:text-gray-400">
+            <li>About Us</li>
+            <li>Documentation</li>
+            <li>Contact us</li>
+            <li>News & Media</li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-6">
+            Explore
+          </p>
+          <ul class="flex flex-col space-y-4 font-medium text-[14px] text-gray-500 dark:text-gray-400">
+            <li>Blog</li>
+            <li>Community</li>
+            <li>Roadmap</li>
+            <li>Brand Kit</li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-6">
+            Foundation
+          </p>
+          <ul class="flex flex-col space-y-4 font-medium text-[14px] text-gray-500 dark:text-gray-400">
+            <li>Privacy Policy</li>
+            <li>Research</li>
+            <li>Become a Validator</li>
+            <li>5ire Ambassador Program</li>
+            <li>Sustainability</li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-6">
+            Legal
+          </p>
+          <ul class="flex flex-col space-y-4 font-medium text-[14px] text-gray-500 dark:text-gray-400">
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+    <div class="flex justify-between item-center p-4 w-[100%]">
+      <div class="m-[auto] text-white"> All Rights Reserved © 5ire 2023</div>
+    </div>
+    <section class="bannar hidden md:block m-[-100px]">
+      <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 265">
+        <path fill="#a3e635" fill-opacity="1"
+          d="M0,32L60,53.3C120,75,240,117,360,138.7C480,160,600,160,720,181.3C840,203,960,245,1080,234.7C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+      </svg>
+    </section>
+  </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 600,
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 1100,
+    });
+  </script>
 </body>
+
 </html>
